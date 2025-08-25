@@ -1,5 +1,7 @@
 package com.grupo10.vet_api_empleado.model;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +33,9 @@ public class Empleado {
     private Boolean pacienteFlag;
     @Column(name = "funcionario_flag")
     private Boolean functionarioFlag;
-
+    @Column(name = "registro_fecha")
+    private Date registroFecha;
+    
     public Long getPersonaId() {
         return personaId;
     }
@@ -80,6 +84,11 @@ public class Empleado {
     public void setFunctionarioFlag(Boolean functionarioFlag) {
         this.functionarioFlag = functionarioFlag;
     }
-
+    public Date getRegistroFecha() {
+        return registroFecha;
+    }
+    public void setRegistroFecha(Date registroFecha) {
+        this.registroFecha = registroFecha;
+    }
     
 }
